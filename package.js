@@ -17,7 +17,8 @@ Package.onUse(function (api, where) {
     "server/browserPolicy.js" // set browser policy to allow PayPal scripts and images
   ], "server");
   api.addFiles([
-    "common/router.js"
+    "common/router.js",
+    "common/collections.js"
   ], ["client", "server"]);
   api.addFiles([
     "client/templates/settings/settings.html",

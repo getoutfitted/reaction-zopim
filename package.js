@@ -25,6 +25,7 @@ Package.onUse(function (api, where) {
     "client/templates/settings/settings.js",
     "client/templates/dashboard/dashboard.html",
     "client/templates/dashboard/dashboard.js",
+    "client/startup.js"
   ], "client")
 
 });

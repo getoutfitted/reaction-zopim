@@ -10,7 +10,7 @@ ReactionCore.registerPackage({
       route: "dashboard/zopim",
       description: "Zopim chat for Reaction Commerce",
       route: "dashboard/zopim",
-      icon: "fa fa-zopim",
+      icon: "fa fa-comment",
       cycle: "3",
       container: "reaction-zopim",
     }, {

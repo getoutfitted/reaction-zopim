@@ -9,7 +9,6 @@ Template.zopimSettings.helpers({
 AutoForm.hooks({
   "zopim-update-form": {
     onSuccess: function(operation, result, template) {
-      debugger;
       Alerts.removeSeen();
       return Alerts.add("Zopim settings saved.", "success", {
         autoHide: true

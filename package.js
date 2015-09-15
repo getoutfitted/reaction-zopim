@@ -26,6 +26,8 @@ Package.onUse(function (api, where) {
     "client/templates/dashboard/dashboard.html",
     "client/templates/dashboard/dashboard.js",
     "client/startup.js"
-  ], "client")
-
+  ], "client");
+  api.addFiles([
+    "public/images/zopim_settings.png"
+  ], ["client", "server"], {isAsset: true})
 });

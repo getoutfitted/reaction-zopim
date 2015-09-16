@@ -18,7 +18,8 @@ Package.onUse(function (api, where) {
   ], "server");
   api.addFiles([
     "common/router.js",
-    "common/collections.js"
+    "common/collections.js", 
+    "lib/zopim.js"
   ], ["client", "server"]);
   api.addFiles([
     "client/templates/settings/settings.html",

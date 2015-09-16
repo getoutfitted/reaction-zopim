@@ -29,6 +29,6 @@ Package.onUse(function (api, where) {
     "client/startup.js"
   ], "client");
   api.addFiles([
-    "public/images/zopim_settings.png"
-  ], ["client", "server"], {isAsset: true})
+    "images/zopim_settings.png", 
+  ],  "client", {isAsset: true})
 });

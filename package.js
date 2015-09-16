@@ -32,3 +32,14 @@ Package.onUse(function (api, where) {
     "images/zopim_settings.png", 
   ],  "client", {isAsset: true})
 });
+
+Package.onTest(function(api){
+  api.use('sanjo:jasmine@0.15.2');
+  api.use('velocity:html-reporter@0.7.1');
+  api.use('velocity:console-reporter@0.1.2');
+  api.use('reactioncommerce:core');
+  api.use('getoutfitted:reaction-zopim');
+
+  api.addFiles('tests/jasmine/server/zopim.js', 'server');
+  // api.addFiles('lib/zopim.js', ['client', 'server']);
+});

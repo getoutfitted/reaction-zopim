@@ -1,8 +1,11 @@
 Tracker.autorun(function(){
-  if (Meteor.Zopim.isEnabled()){
+  var widgetExists = $('.zopim').length > 0 ? true : false;
+  
+  if (Meteor.Zopim.isEnabled() && !widgetExists){
     $(document.head).append(Meteor.Zopim.accountOptions().public.chatWidget);
-    } else {
-      $('script:contains(window.$zopim)').remove();
-      $('.zopim').remove();
+  } else if (Meteor.Zopim.isEnabled() && widgetExists) {
+    $zopim.livechat.button.show();
+  } else if (!Meteor.Zopim.isEnabled() && widgetExists) {
+    $zopim.livechat.hideAll();
   }
 });

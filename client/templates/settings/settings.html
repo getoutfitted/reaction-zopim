@@ -1,4 +1,22 @@
 <template name="zopimSettings">
-  <h2>HELLO!</h2>
-  
+      <div class="panel-body">
+      {{#autoForm
+        collection="ReactionCore.Collections.Packages"
+        schema="ReactionCore.Schemas.ZopimPackageConfig"
+        doc=packageData
+        type="update"
+        id="zopim-update-form"
+        }}
+      
+        <div class="form-group">
+          Don't have a Zopim account? <a href="https://account.zopim.com/signup?lang=en-us" target="_blank">Get one here.</a>
+        </div>
+
+
+        {{>afQuickField type='textarea' class="zopim-textarea" rows="10" name='settings.public.chatWidget'}}
+
+
+        <button type="submit" class="btn btn-primary pull-right">Save Changes</button>
+      {{/autoForm}}
+    </div>
 </template>

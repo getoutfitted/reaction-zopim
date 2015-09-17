@@ -7,7 +7,7 @@ describe('Meteor Zopim methods', function() {
     });
     it('Zopim has no chatwidget initially', function() {
       var zopim = Meteor.Zopim.accountOptions(); 
-      expect(zopim).toEqual("hi");
+      expect(zopim.public).toEqual({});
     });
 
 });

@@ -7,7 +7,10 @@ describe('Meteor Zopim methods', function() {
     });
     it('Zopim has no chatwidget initially', function() {
       var zopim = Meteor.Zopim.accountOptions(); 
-      expect(zopim.public).toEqual({});
+      expect(zopim).not.toEqual(jasmine.objectContaining({
+        setttings: { public: { chatWidget: ''} }
+      }))
+      expect(zopim).toEqual({settings: { public: { chatWidget: ''} }});
     });
 
 });

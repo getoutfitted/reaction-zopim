@@ -34,12 +34,17 @@ Package.onUse(function (api, where) {
 });
 
 Package.onTest(function(api){
+  api.versionsFrom('METEOR@1.1.0.2');
+  api.use('meteor-platform');
   api.use('sanjo:jasmine@0.15.2');
   api.use('velocity:html-reporter@0.7.1');
   api.use('velocity:console-reporter@0.1.2');
+  api.use('velocity:helpers');
   api.use('reactioncommerce:core');
   api.use('getoutfitted:reaction-zopim');
-
+  api.addFiles('tests/jasmine/client/lib/wait_for_router_helper.js', ['server','client']);
   api.addFiles('tests/jasmine/server/zopim.js', 'server');
-  // api.addFiles('lib/zopim.js', ['client', 'server']);
+  api.addFiles('tests/jasmine/client/zopim_client.js', 'client');
+
 });
+

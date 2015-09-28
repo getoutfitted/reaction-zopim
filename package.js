@@ -6,7 +6,7 @@ Package.describe({
 });
 
 Package.onUse(function (api, where) {
-  api.versionsFrom('METEOR@1.1.0.2');
+  api.versionsFrom('METEOR@1.2');
   api.use("meteor-platform");
   api.use("less");
   api.use("http");
@@ -18,7 +18,7 @@ Package.onUse(function (api, where) {
   ], "server");
   api.addFiles([
     "common/router.js",
-    "common/collections.js", 
+    "common/collections.js",
     "lib/zopim.js"
   ], ["client", "server"]);
   api.addFiles([
@@ -28,7 +28,7 @@ Package.onUse(function (api, where) {
     "client/templates/dashboard/dashboard.js",
     "client/startup.js"
   ], "client");
-  api.addFiles([
-    "images/zopim_settings.png", 
-  ],  "client", {isAsset: true})
+  api.addAssets([
+    "images/zopim_settings.png",
+  ],  "client");
 });

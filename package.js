@@ -1,8 +1,8 @@
 Package.describe({
   summary: "Reaction Zopim - Zendesk Zopim Chat for Reaction Commerce",
   name: "getoutfitted:reaction-zopim",
-  version: "0.1.0",
-  // git: "https://github.com/reactioncommerce/reaction-paypal.git"
+  version: "0.2.0",
+  git: "https://github.com/getoutfitted/reaction-zopim"
 });
 
 Package.onUse(function (api, where) {

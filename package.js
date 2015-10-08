@@ -1,7 +1,7 @@
 Package.describe({
   summary: "Reaction Zopim - Zendesk Zopim Chat for Reaction Commerce",
   name: "getoutfitted:reaction-zopim",
-  version: "0.2.0",
+  version: "0.2.1",
   git: "https://github.com/getoutfitted/reaction-zopim"
 });
 
@@ -10,7 +10,7 @@ Package.onUse(function (api, where) {
   api.use("meteor-platform");
   api.use("less");
   api.use("http");
-  api.use("reactioncommerce:core@0.6.0");
+  api.use("reactioncommerce:core@0.9.0");
 
   api.addFiles([
     "server/register.js", // register as a reaction package

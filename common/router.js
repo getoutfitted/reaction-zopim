@@ -1,10 +1,10 @@
-Router.map(function() {
-  this.route('dashboard/zopim'), {
+Router.map(function () {
+  this.route('dashboard/zopim', {
     controller: ShopAdminController,
     path: '/dashboard/zopim',
-    template: 'zopimSettings',
-    waitOn: function(){
+    template: 'dashboardZopim',
+    waitOn: function () {
       return ReactionCore.Subscriptions.Packages;
     }
-  }
+  });
 });

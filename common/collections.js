@@ -1,13 +1,13 @@
 ReactionCore.Schemas.ZopimPackageConfig = new SimpleSchema([
   ReactionCore.Schemas.PackageConfig, {
-    "settings.public" : {
+    'settings.public': {
       type: Object,
       optional: true
     },
-    "settings.public.chatWidget": {
+    'settings.public.chatWidget': {
       type: String,
-      label: "Live Chat Widget URL",
-      min: 50, 
+      label: 'Live Chat Widget URL',
+      min: 50,
       optional: true
     }
   }

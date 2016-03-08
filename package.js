@@ -18,7 +18,6 @@ Package.onUse(function (api) {
     'server/browserPolicy.js' // set browser policy to allow PayPal scripts and images
   ], 'server');
   api.addFiles([
-    'common/router.js',
     'common/collections.js',
     'lib/zopim.js'
   ], ['client', 'server']);

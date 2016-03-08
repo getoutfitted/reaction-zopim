@@ -1,7 +1,8 @@
 Template.zopimSettings.helpers({
   packageData: function () {
     return ReactionCore.Collections.Packages.findOne({
-      name: 'reaction-zopim'
+      name: 'reaction-zopim',
+      shopId: ReactionCore.getShopId()
     });
   }
 });

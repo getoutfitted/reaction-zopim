@@ -6,25 +6,22 @@ ReactionCore.registerPackage({
   registry: [
     {
       provides: 'dashboard',
+      route: '/dashboard/zopim',
+      name: 'Zopim',
       label: 'Zopim',
-      route: 'dashboard/zopim',
-      description: 'Zopim chat for Reaction Commerce',
+      description: 'Provide Customer Chat Interface',
       icon: 'fa fa-comment',
-      cycle: '3',
-      container: 'reaction-zopim'
-    }, {
-      label: 'Zopim Settings',
-      route: 'dashboard/zopim',
-      provides: 'settings',
-      container: 'reaction-zopim',
-      template: 'zopimSettings'
-    }
-  ],
-  permissions: [
+      priority: 2,
+      container: 'getoutfitted',
+      template: 'dashboardZopim',
+      workflow: 'coreWorkflow'
+    },
     {
-      label: 'Zopim',
-      permission: 'dashboard/zopim',
-      group: 'Shop Settings'
+      label: 'Zopim Settings',
+      route: '/dashboard/zopim/settings',
+      provides: 'settings',
+      name: 'zopimSettings',
+      template: 'zopimSettings'
     }
   ]
 });

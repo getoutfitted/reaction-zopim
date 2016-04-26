@@ -6,19 +6,18 @@ Package.describe({
 });
 
 Package.onUse(function (api) {
-  api.versionsFrom('METEOR@1.2');
+  api.versionsFrom('METEOR@1.2.1');
   api.use('meteor-platform');
   api.use('less');
   api.use('http');
-  api.use('reactioncommerce:core@0.9.3');
-
+  api.use('reactioncommerce:core@0.12.0');
+  api.use('reactioncommerce:reaction-router');
 
   api.addFiles([
     'server/register.js', // register as a reaction package
     'server/browserPolicy.js' // set browser policy to allow PayPal scripts and images
   ], 'server');
   api.addFiles([
-    'common/router.js',
     'common/collections.js',
     'lib/zopim.js'
   ], ['client', 'server']);

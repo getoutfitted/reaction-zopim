@@ -1,4 +1,5 @@
 Tracker.autorun(function () {
+  ReactionRouter.watchPathChange();
   let widgetExists = $('.zopim').length > 0 ? true : false;
   if (Meteor.Zopim.isEnabled() && !widgetExists) {
     $(document.head).append(Meteor.Zopim.accountOptions().public.chatWidget);

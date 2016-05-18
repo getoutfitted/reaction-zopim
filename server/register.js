@@ -2,7 +2,7 @@ ReactionCore.registerPackage({
   label: 'Zopim',
   name: 'reaction-zopim',
   icon: 'fa fa-comment',
-  autoEnable: false,
+  autoEnable: true,
   registry: [
     {
       provides: 'dashboard',

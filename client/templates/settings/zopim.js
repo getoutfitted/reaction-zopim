@@ -1,21 +1,28 @@
+import { Template } from "meteor/templating";
+import { Reaction } from "/client/api";
+import { Packages } from "/lib/collections";
+import { ZopimPackageConfig } from "../../../lib/collections/schemas";
+
+import './zopim.html';
+
 Template.zopimSettings.helpers({
   packageData: function () {
-    return ReactionCore.Collections.Packages.findOne({
+    return Packages.findOne({
       name: 'reaction-zopim',
-      shopId: ReactionCore.getShopId()
+      shopId: Reaction.getShopId()
     });
   }
 });
 
 AutoForm.hooks({
   'zopim-update-form': {
-    onSuccess: function (operation, result, template) {
+    onSuccess(operation, result, template) {
       Alerts.removeSeen();
       return Alerts.add('Zopim settings saved.', 'success', {
         autoHide: true
       });
     },
-    onError: function (operation, error, template) {
+    onError(operation, error, template) {
       Alerts.removeSeen();
       return Alerts.add('Zopim settings update failed. ' + error, 'danger');
     }

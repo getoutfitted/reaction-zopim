@@ -6,7 +6,10 @@ import { ZopimPackageConfig } from "../../../lib/collections/schemas";
 import './zopim.html';
 
 Template.zopimSettings.helpers({
-  packageData: function () {
+  ZopimPackageConfig() {
+    return ZopimPackageConfig;
+  },
+  packageData() {
     return Packages.findOne({
       name: 'reaction-zopim',
       shopId: Reaction.getShopId()

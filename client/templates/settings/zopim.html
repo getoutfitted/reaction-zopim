@@ -1,13 +1,13 @@
 <template name="zopimSettings">
       <div class="panel-body">
       {{#autoForm
-        collection="ReactionCore.Collections.Packages"
-        schema="ReactionCore.Schemas.ZopimPackageConfig"
+        collection=Collections.Packages
+        schema=ZopimPackageConfig
         doc=packageData
         type="update"
         id="zopim-update-form"
         }}
-      
+
         <div class="form-group">
           Don't have a Zopim account? <a href="https://account.zopim.com/signup?lang=en-us" target="_blank">Get one here.</a>
         </div>
